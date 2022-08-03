@@ -37,6 +37,8 @@ function criaTarefa(textoInput){
     criaBotaoApagar(li);
     salvarTarefas();
 }
+// Dentro da função criaTarefa nós estamos chamando outras funções, pois quando a criação for executada, junto dela é para ser criado as outras funcionalidades como o botão de apagar por exemplo.
+
 
 btnTarefa.addEventListener("click", function(){
     if(!inputTarefa.value) return;
