@@ -24,9 +24,12 @@ function criaBotaoApagar(li){
     li.innerText += ' ';
     const botaoApagar = document.createElement('button');
     botaoApagar.innerText = 'Apagar';
+    const iconeApagar = document.createElement('i');
+    iconeApagar.setAttribute('class', 'fa fa-trash');
     botaoApagar.setAttribute('class', 'apagar'); //Aqui nós estamos adicionando uma classe através do setAttribute. Nele nós passamos 2 parâmetros, o atributo e o valor. Nesse caso passamos que será adicionado uma classe e logo a frente o nome da classe adicionada.
     botaoApagar.setAttribute('title', 'Apagar tarefa'); // Outro exemplo utilizando setAttribute, que pode ser utilizado de diversas maneiras.
     li.appendChild(botaoApagar);
+    botaoApagar.appendChild(iconeApagar);
 }
 
 function criaTarefa(textoInput){
