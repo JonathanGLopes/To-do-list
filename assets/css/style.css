@@ -43,3 +43,25 @@ body {
     border: 1px solid #000;
     cursor: pointer;
 }
+
+.apagar {
+    padding: 4px 10px;
+    margin-left: 10px;
+}
+
+.fa {
+    margin-left: 4px;
+}
+
+.apagar:hover{
+    color: red;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+li {
+   display: flex;
+   justify-content: space-between;
+   align-content: center;
+   margin-top: 1rem;
+}
