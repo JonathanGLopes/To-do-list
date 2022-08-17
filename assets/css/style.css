@@ -1,67 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-:root {
-    --primary-color: rgb(18, 110, 153);
-    --primary-color-darker: rgb(9, 48, 56);
-}
-
-* {
+/* Geral */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    color: #333;
     box-sizing: border-box;
-    outline: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary-color);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    background-image: url("../img/bg-tech.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
+button {
+    background-color: #FDFDFD;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: #102f5e;
+    color: #FFF;
+}
+
+button:hover > i {
+    color: #FFF;
+}
+
+button i {
+    color: #102f5e;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input, select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* To-do Header */
 .container {
-    max-width: 640px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: antiquewhite;
-    border-radius: 1rem;
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+/* To-do Form*/
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+#todo-form p, #edit-form p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
+
+/*To-do Toolbar */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #CCC;
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-right: 1px solid #DDD;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
     display: flex;
     flex-direction: column;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    flex: 1;
+}
+
+/*To-do List*/
+
+.todo {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #DDD;
+    transition: .3s;
 }
 
-.input-tarefa {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #000;
-    width: 350px;
+.todo h3 {
+    flex: 1;
+    font-size: .9rem;
 }
 
-.btn-tarefa {
-    padding: 8px 1rem;
-    border-radius: 5px;
-    border: 1px solid #000;
-    cursor: pointer;
+.todo button{
+    margin-left: 0.4rem;
 }
 
-.apagar {
-    padding: 4px 10px;
-    margin-left: 10px;
-}
-
-.fa {
-    margin-left: 4px;
-}
-
-.apagar:hover{
-    color: red;
-    transition: 200ms;
-    cursor: pointer;
-}
-
-li {
-   display: flex;
-   justify-content: space-between;
-   align-content: center;
-   margin-top: 1rem;
+/*Classe a ser adicionada quando a tarefa for realizada*/
+.done {
+    background-color: #395169;
+    text-decoration: line-through;
+    font-style: italic;
 }
